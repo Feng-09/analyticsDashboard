@@ -14,6 +14,7 @@ import logout from '../images/logout.svg'
 import calendar from '../images/solar_calendar-linear.svg'
 import bell from '../images/solar_bell-outline.svg'
 import { useState } from 'react'
+import Extra from './extra'
 
 function SideBar({ menu, handleTheme, theme }) {
   const [currIcon, setCurrIcon] = useState(1)
@@ -29,7 +30,7 @@ function SideBar({ menu, handleTheme, theme }) {
             <div className='flex flex-col items-center mb-6'>
               <div className='px-4 py-3 flex justify-between w-48'>
                   <img src={calendar} className={theme == 'dark' ? 'filt' : null} />
-                  <h2 className='font-inter text-sm font-semibold leading-[1.375rem] text-[#26282C] dark:text-slate-300'>November 15, 2023</h2>
+                  <Extra />
               </div>
               <div className='border border-[#DADDDD] rounded-full w-10 h-10 flex items-center justify-center' onClick={handleRing}>
                   <img src={bell} className={theme == 'dark' ? 'filt' : null} />
