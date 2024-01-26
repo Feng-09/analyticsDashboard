@@ -1,16 +1,27 @@
-import arrowD from '../images/Arrow - Down 2.png'
+import arrowD from '../images/Arrow - Down 2.svg'
 import top from '../images/Combined Shape.png'
 
-function SalesTrends() {
+function SalesTrends({ theme }) {
+  const handleClick = (e) => {
+    e.currentTarget.nextElementSibling.classList.toggle('active')
+    e.currentTarget.lastElementChild.classList.toggle("active")
+  }
+
     return (
-        <div className="bg-white p-5 border border-[#EDF2F7] rounded-[0.875rem] w-fit trend">
+        <div className="bg-white dark:bg-[#090c1d] p-5 border border-[#EDF2F7] rounded-[0.875rem] w-fit trend">
             <div className="flex justify-between mb-4">
-                <h2 className="font-jakarta text-lg text-[#26282C] font-semibold">Sales Trends</h2>
-                <div className='flex items-center'>
-                    <p className="font-jakarta text-sm font-semibold text-[#3A3F51] mr-[0.675rem]">Sort by:</p>
-                    <div className='py-[0.375rem] px-3 border border-[#E1DFDF] rounded-full flex items-center'>
-                        <p className='mr-[0.675rem] font-jakarta text-xs text-[#3A3F51]'>Weekly</p>
-                        <img src={arrowD} className="w-5 h-5" />
+                <h2 className="font-jakarta text-lg text-[#26282C] dark:text-slate-300 font-semibold">Sales Trends</h2>
+                <div className='flex items-center relative'>
+                    <p className="font-jakarta text-sm font-semibold text-[#3A3F51] dark:text-slate-300 mr-[0.675rem]">Sort by:</p>
+                    <div className='py-[0.375rem] px-3 border border-[#E1DFDF] rounded-full flex items-center' onClick={handleClick}>
+                        <p className='mr-[0.675rem] font-jakarta text-xs text-[#3A3F51] dark:text-slate-300'>Weekly</p>
+                        <img src={arrowD} className={theme == 'dark' ? 'filt w-5 h-5 arr' : 'w-5 h-5 arr'} />
+                    </div>
+                    <div className='flex flex-col filtDrop gap-2 w-24 z-20 absolute right-0 top-[3rem] rounded-lg bg-white dark:bg-slate-950 shadow shadow-slate-700'>
+                      <p className='font-inter h-4 text-[#3A3F51] dark:text-slate-300 text-xs'>Weekly</p>
+                      <p className='font-inter h-4 text-[#3A3F51] dark:text-slate-300 text-xs'>Monthly</p>
+                      <p className='font-inter h-4 text-[#3A3F51] dark:text-slate-300 text-xs'>Yearly</p>
+                      <p className='font-inter h-4 text-[#3A3F51] dark:text-slate-300 text-xs'>All Time</p>
                     </div>
                 </div>
             </div>
@@ -58,13 +69,13 @@ function SalesTrends() {
                   </svg>
                 </div>
                 <div className='flex flex-col items-start justify-between h-[11rem] sm:h-[15.9375rem] opacity-55 mr-7'>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>50.000</p>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>40.000</p>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>30.000</p>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>20.000</p>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>10.000</p>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>5.000</p>
-                    <p className='font-jakarta text-xs font-semibold text-[#525252]'>0</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>50.000</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>40.000</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>30.000</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>20.000</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>10.000</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>5.000</p>
+                    <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>0</p>
                 </div>
                 <div className='grid grid-cols grid-flow-col col-span-12 gap-3 sm:gap-6 items-end h-fit z-10 flat'>
                     <div className='w-5 sm:w-7 h-[4.25rem] rounded-t-[1.25rem] bg-[#34caa51a]'></div>
@@ -83,18 +94,18 @@ function SalesTrends() {
             </div>
             <div className='flex justify-end opacity-55'>
                 <div className='grid grid-cols grid-flow-col col-span-12 gap-3 sm:gap-6'>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Jan</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Feb</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Mar</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Apr</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>May</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Jun</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] text-center sm:text-sm font-semibold font-jakarta text-[#525252]'>Jul</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Aug</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Sep</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Oct</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Nov</div>
-                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252]'>Dec</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Jan</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Feb</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Mar</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Apr</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>May</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Jun</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] text-center sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Jul</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Aug</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Sep</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Oct</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Nov</div>
+                    <div className='w-5 sm:w-7 text-[0.6rem] sm:text-sm font-semibold font-jakarta text-[#525252] dark:text-slate-200'>Dec</div>
 
                 </div>
             </div>

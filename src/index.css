@@ -33,8 +33,54 @@
   width: 5rem;
 }
 
+.prof {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 0 1rem;
+}
+
+.prof.active {
+  height: fit-content;
+  padding: 1rem 1rem;
+  transition: 0.3s;
+}
+
+.filtDrop {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 0 0.75rem;
+}
+
+.filtDrop.active {
+  height: fit-content;
+  padding: 0.5rem 0.75rem;
+  transition: 0.3s;
+}
+
+.arr.active {
+  transform: rotate(-180deg);
+  transition: 0.3s;
+}
+
+.arr {
+  transition: 0.3s;
+}
+
 .trend {
   width: fit-content;
+}
+
+.slide {
+  bottom: auto;
+  top: 0.5rem;
+  transition: 0.4s;
+}
+
+.slide.active {
+  transform: translateY(2.9rem);
+  transition: 0.4s;
 }
 
 a {
@@ -91,16 +137,92 @@ button:focus-visible {
   }
 }
 
+  .filt {
+    filter: brightness(0) invert(100%);
+  }
+  .filt2 {
+    filter: brightness(0) invert(50%);
+  }
+  .filt2Dark {
+    filter: invert(90%) sepia(79%) saturate(3444%) hue-rotate(130deg) brightness(100%) contrast(104%);
+  }
+  .icon {
+    filter: invert(4%) sepia(79%) saturate(3444%) hue-rotate(200deg) brightness(20%) contrast(104%);
+  }
+  .iconDark {
+    filter: invert(4%) sepia(79%) saturate(3444%) hue-rotate(130deg) brightness(100%) contrast(104%);
+  }
+
+  .bell {
+    animation: bellAnim;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes bellAnim {
+    0% {
+    }
+    20% {
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+    30% {
+      transform: rotate(-20deg);
+      transform-origin: top;
+    }
+    35% {
+      transform: rotate(20deg);
+      transform-origin: top;
+    }
+    40% {
+      transform: rotate(-20deg);
+      transform-origin: top;
+    }
+    45% {
+      transform: rotate(20deg);
+      transform-origin: top;
+    }
+    50% {
+      transform: rotate(-20deg);
+      transform-origin: top;
+    }
+    55% {
+      transform: rotate(20deg);
+      transform-origin: top;
+    }
+    60% {
+      transform: rotate(-20deg);
+      transform-origin: top;
+    }
+    65% {
+      transform: rotate(20deg);
+      transform-origin: top;
+    }
+    70% {
+      transform: rotate(0deg);
+      transform-origin: top;
+    }
+    80% {
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: center;
+    }
+  }
+
 @media (max-width: 1280px) {
   .scalo {
     transform: scale(0.95);
+    transform-origin: center;
     width: 106%;
     position: relative;
-    right: 2.1rem;
+    right: 3rem;
     bottom: 1rem;
   }
   .col {
-    grid-template-columns: min-content;
+    grid-template-columns: auto auto;
   }
 }
 
@@ -117,22 +239,11 @@ button:focus-visible {
     transition: 0.4s;
     overflow: hidden;
   }
-/*   
-  .menu div div {
-    width: 0;
-    transition: 0.1s;
-  } */
   
   .bar.active {
     width: 15rem;
     transition: 0.4s;
-  }
-/*   
-  .menu.active div div {
-    width: 0.25rem;
-    transition-delay: 0.3s;
-  } */
-  
+  }  
   
   #line1.active {
     animation: Anim1;
@@ -228,12 +339,29 @@ button:focus-visible {
 }
 
 @media (min-width: 1024px) {
+  @media not all and (min-width: 1280px) {
   .scalo {
     transform: scale(1);
     width: 100%;
     position: static;
   }
+ }
 }
+
+/* @media (min-width: 1289px) {
+  @media not all and (min-width: 1300px) {
+    .scalo {
+      transform: scale(0.9);
+      transform-origin: center;
+      width: 100%;
+      position: static;
+    }
+    .cards {
+        gap: 0.5rem;
+        row-gap: 0px;
+    }
+  }
+} */
 
 @media (min-width: 720px) {
   @media not all and (min-width: 1280px) {
@@ -243,17 +371,17 @@ button:focus-visible {
       position: static;
     }
 
-      .trend {
+    .trend {
           grid-column: span 2 / span 2;
-      }
-      .cards {
+    }
+    .cards {
         gap: 0.5rem;
         row-gap: 0px;
     }
     .orders {
       grid-column: span 2 / span 2;
       order: 9999;
-  }
+    }
   }
 }
 
@@ -268,17 +396,17 @@ button:focus-visible {
       right: auto;
     }
 
-      .trend {
+    .trend {
           grid-column: span 2 / span 2;
-      }
-      .cards {
+    }
+    .cards {
         gap: 0.5rem;
         row-gap: 0px;
     }
     .orders {
       grid-column: span 2 / span 2;
       order: 9999;
-  }
+    }
   }
 }
 
@@ -291,31 +419,18 @@ button:focus-visible {
     transform-origin: bottom;
   }
   .trend {
-    /* transform-origin: center;
-    transform: scale(0.5); */
     grid-column: span 2 / span 2;
-    /* width: 100%; */
   }
   .cards {
-    /* transform-origin: center;
-    transform: scale(0.5); */
     grid-column: span 2 / span 2;
     margin: 0 auto;
   }
   .orders {
-    /* transform-origin: center;
-    transform: scale(0.5); */
     grid-column: span 2 / span 2;
     order: initial;
   }
   .platforms {
-    /* transform-origin: center;
-    transform: scale(0.5); */
     grid-column: span 2 / span 2;
-  }
-  .search {
-    /* transform-origin: center;
-    transform: scale(0.5); */
   }
 }
 
