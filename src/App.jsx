@@ -11,7 +11,6 @@ import Platform from './platform'
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-let eclipse = document.querySelector('.eclipse');
 
 function App() {
   const [menu, setMenu] = useState(false)
@@ -55,7 +54,7 @@ function App() {
       e.currentTarget.children[0].classList.toggle("active")
       e.currentTarget.children[1].classList.toggle("active")
       e.currentTarget.children[2].classList.toggle("active")
-      eclipse.classList.toggle("active")
+      document.getElementById('eclipse').classList.toggle("active")
 
     if (menu == false) {
       gsap.from(".animage", {y:30, opacity: 0, stagger: 0.05, duration: 1, delay: 0.4, ease: 'elastic.out'})
@@ -73,7 +72,7 @@ function App() {
   return (
     <main className='bg-[#FAFAFA] dark:bg-slate-950 w-screen min-h-screen pt-[6.5rem] pl-5 lg:pl-[6.25rem] overflow-hidden pr-0 mr-0 adjust'>
       <div className='flair rounded-full w-4 h-4 border border-slate-950 dark:border-slate-200 hidden lg:flex items-center justify-center fixed top-4 left-4 z-50'><div className='bg-slate-950 dark:bg-slate-200 w-2 h-2 rounded-full'></div></div>
-      <div className='w-screen h-screen mx-[-10rem] bg-black fixed top-0 pointer-events-none z-30 eclipse'></div>
+      <div id='eclipse' className='w-screen h-screen mx-[-10rem] bg-black fixed top-20 pointer-events-none z-30 eclipse'></div>
       {window.screen.width < 1024 ? (
          <div className='flex flex-col gap-1 fixed top-9 right-6 z-40 ham' onClick={handleMenu}>
            <div className='w-6 h-1 bg-[#0D062D] dark:bg-slate-300 rounded-full' id='line1'></div>
