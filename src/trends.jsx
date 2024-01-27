@@ -1,5 +1,9 @@
 import arrowD from '../images/Arrow - Down 2.svg'
 import top from '../images/Combined Shape.png'
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import Extra from './extra'
 
 function SalesTrends({ theme }) {
   const handleClick = (e) => {
@@ -7,6 +11,11 @@ function SalesTrends({ theme }) {
     e.currentTarget.lastElementChild.classList.toggle("active")
   }
 
+  const container = useRef()
+
+  useGSAP(() => {
+    gsap.from(".barItem", {height: 0, stagger: 0.01, duration: 0.2,})
+  }, { scope: container })
     return (
         <div className="bg-white dark:bg-[#090c1d] p-5 border border-[#EDF2F7] rounded-[0.875rem] w-fit trend">
             <div className="flex justify-between mb-4">
@@ -77,84 +86,84 @@ function SalesTrends({ theme }) {
                     <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>5.000</p>
                     <p className='font-jakarta text-xs font-semibold text-[#525252] dark:text-slate-200'>0</p>
                 </div>
-                <div className='grid grid-cols grid-flow-col col-span-12 gap-3 sm:gap-6 items-end h-fit z-10 flat'>
+                <div className='grid grid-cols grid-flow-col col-span-12 gap-3 sm:gap-6 items-end h-fit z-10 flat' ref={container}>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$7.500</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[4.25rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[4.25rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$18.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[7.5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[7.5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$3.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[2.5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[2.5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$30.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[10rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[10rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$8.500</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
-                  <div className='w-5 sm:w-7 h-[13.5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-gradient-to-b from-[#34CAA5] to-[#34caa500]'></div>
+                  <div className='w-5 sm:w-7 h-[13.5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-gradient-to-b from-[#34CAA5] to-[#34caa500] barItem'></div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$8.500</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[5rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$20.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[8.1875rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[8.1875rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$34.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[11.375rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[11.375rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$5.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[3.1875rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[3.1875rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$31.500</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[10.6875rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[10.6875rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                   <div className='relative group'>
                     <div className='absolute top-0 mx-[-1rem] my-[-1.8rem] text-center hidden group-hover:block'>
                       <img src={top} />
                       <p className='font-inter text-xs font-semibold text-white relative bottom-[1.4rem] opacity-70'>$25.000</p>
                     </div>
-                    <div className='w-5 sm:w-7 h-[9.4375rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a]'></div>
+                    <div className='w-5 sm:w-7 h-[9.4375rem] rounded-t-[1.25rem] hover:cursor-pointer bg-[#34caa51a] barItem'></div>
                   </div>
                 </div>
             </div>
