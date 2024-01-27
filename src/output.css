@@ -562,6 +562,44 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -576,6 +614,10 @@ html {
 
 .bottom-7 {
   bottom: 1.75rem;
+}
+
+.bottom-\[1\.4rem\] {
+  bottom: 1.4rem;
 }
 
 .left-0 {
@@ -598,12 +640,48 @@ html {
   right: 0px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .right-5 {
   right: 1.25rem;
 }
 
 .right-6 {
   right: 1.5rem;
+}
+
+.right-\[-0\.7rem\] {
+  right: -0.7rem;
+}
+
+.right-\[-1\.1rem\] {
+  right: -1.1rem;
+}
+
+.right-\[-1\.4rem\] {
+  right: -1.4rem;
+}
+
+.right-\[-1\.8rem\] {
+  right: -1.8rem;
+}
+
+.right-\[-2\.2rem\] {
+  right: -2.2rem;
+}
+
+.right-\[-2\.3rem\] {
+  right: -2.3rem;
+}
+
+.right-\[-2\.5rem\] {
+  right: -2.5rem;
+}
+
+.right-\[-30px\] {
+  right: -30px;
 }
 
 .right-\[0\.0625rem\] {
@@ -614,8 +692,16 @@ html {
   top: 0px;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .top-2 {
   top: 0.5rem;
+}
+
+.top-4 {
+  top: 1rem;
 }
 
 .top-9 {
@@ -654,6 +740,10 @@ html {
   z-index: 40;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -666,9 +756,29 @@ html {
   grid-column: span 2 / span 2;
 }
 
+.mx-\[-10rem\] {
+  margin-left: -10rem;
+  margin-right: -10rem;
+}
+
+.mx-\[-1rem\] {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.mx-\[-3rem\] {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-\[-1\.8rem\] {
+  margin-top: -1.8rem;
+  margin-bottom: -1.8rem;
 }
 
 .mb-3 {
@@ -735,6 +845,10 @@ html {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -745,6 +859,10 @@ html {
 
 .h-12 {
   height: 3rem;
+}
+
+.h-2 {
+  height: 0.5rem;
 }
 
 .h-3 {
@@ -860,12 +978,20 @@ html {
   width: 2.5rem;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
 .w-20 {
   width: 5rem;
 }
 
 .w-24 {
   width: 6rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-48 {
@@ -1037,6 +1163,14 @@ html {
   border-radius: 0.5rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .rounded-t-\[1\.25rem\] {
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
@@ -1082,6 +1216,11 @@ html {
 .border-\[\#EDF2F7\] {
   --tw-border-opacity: 1;
   border-color: rgb(237 242 247 / var(--tw-border-opacity));
+}
+
+.border-slate-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 6 23 / var(--tw-border-opacity));
 }
 
 .bg-\[\#0D062D\] {
@@ -1141,8 +1280,18 @@ html {
   background-color: #ed544e1f;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-inherit {
   background-color: inherit;
+}
+
+.bg-slate-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1162,6 +1311,10 @@ html {
 
 .to-\[\#34caa500\] {
   --tw-gradient-to: #34caa500 var(--tw-gradient-to-position);
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-2 {
@@ -1364,6 +1517,11 @@ html {
   color: rgb(237 84 78 / var(--tw-text-opacity));
 }
 
+.text-slate-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1371,6 +1529,10 @@ html {
 
 .opacity-55 {
   opacity: 0.55;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .shadow {
@@ -1452,6 +1614,17 @@ html {
 
 .slide.active {
   transform: translateY(2.9rem);
+  transition: 0.4s;
+}
+
+.eclipse {
+  opacity: 0;
+  transition: 0.4s;
+  transition-delay: 0.6s;
+}
+
+.eclipse.active {
+  opacity: 0.5;
   transition: 0.4s;
 }
 
@@ -1620,7 +1793,7 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .bar {
     left: auto;
     right: 0;
@@ -1629,6 +1802,7 @@ button:focus-visible {
     width: 0;
     transition: 0.4s;
     overflow: hidden;
+    transition-delay: 0.6s;
   }
 
   .bar.active {
@@ -1729,6 +1903,14 @@ button:focus-visible {
   }
 }
 
+@media (min-width: 1360px) {
+  .adjust {
+    display: flex;
+    justify-items: start;
+    align-items: start;
+  }
+}
+
 @media (min-width: 1024px) {
   @media not all and (min-width: 1280px) {
     .scalo {
@@ -1739,20 +1921,21 @@ button:focus-visible {
   }
 }
 
-/* @media (min-width: 1289px) {
-  @media not all and (min-width: 1300px) {
+@media (min-width: 1281px) {
+  @media not all and (min-width: 1400px) {
     .scalo {
-      transform: scale(0.9);
+      transform: scale(0.97);
       transform-origin: center;
       width: 100%;
       position: static;
     }
+
     .cards {
-        gap: 0.5rem;
-        row-gap: 0px;
+      gap: 0.5rem;
+      row-gap: 0px;
     }
   }
-} */
+}
 
 @media (min-width: 720px) {
   @media not all and (min-width: 1280px) {
@@ -1813,6 +1996,13 @@ button:focus-visible {
   .flat {
     transform: scaleY(0.7);
     transform-origin: bottom;
+  }
+
+  .flatter {
+    transform: scale(0.63);
+    transform-origin: bottom;
+    right: -9rem;
+    top: -4rem;
   }
 
   .trend {
@@ -1913,6 +2103,15 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+:is(.dark .dark\:border-slate-200) {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
 :is(.dark .dark\:bg-\[\#090c1d\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(9 12 29 / var(--tw-bg-opacity));
@@ -1943,6 +2142,11 @@ button:focus-visible {
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:bg-white) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:text-slate-200) {
   --tw-text-opacity: 1;
   color: rgb(226 232 240 / var(--tw-text-opacity));
@@ -1961,6 +2165,11 @@ button:focus-visible {
 :is(.dark .dark\:text-slate-500) {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-slate-800) {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:brightness-200) {
@@ -2039,15 +2248,5 @@ button:focus-visible {
 
   .lg\:pr-5 {
     padding-right: 1.25rem;
-  }
-
-  @media not all and (min-width: 1280px) {
-    .lg\:max-xl\:focus\:w-\[23rem\]:focus {
-      width: 23rem;
-    }
-
-    .lg\:max-xl\:focus\:w-\[25rem\]:focus {
-      width: 25rem;
-    }
   }
 }

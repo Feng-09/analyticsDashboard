@@ -83,6 +83,18 @@
   transition: 0.4s;
 }
 
+.eclipse {
+  opacity: 0;
+  transition: 0.4s;
+  transition-delay: 0.6s;
+}
+
+.eclipse.active {
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -226,7 +238,7 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .bar {
     left: auto;
     right: 0;
@@ -238,13 +250,14 @@ button:focus-visible {
     width: 0;
     transition: 0.4s;
     overflow: hidden;
+    transition-delay: 0.6s;
   }
   
   .bar.active {
     width: 15rem;
     transition: 0.4s;
-  }  
-  
+  }
+
   #line1.active {
     animation: Anim1;
     animation-duration: 0.5s;
@@ -338,6 +351,14 @@ button:focus-visible {
   }
 }
 
+@media (min-width: 1360px) {
+  .adjust {
+    display: flex;
+    justify-items: start;
+    align-items: start;
+  }
+}
+
 @media (min-width: 1024px) {
   @media not all and (min-width: 1280px) {
   .scalo {
@@ -348,10 +369,10 @@ button:focus-visible {
  }
 }
 
-/* @media (min-width: 1289px) {
-  @media not all and (min-width: 1300px) {
+@media (min-width: 1281px) {
+  @media not all and (min-width: 1400px) {
     .scalo {
-      transform: scale(0.9);
+      transform: scale(0.97);
       transform-origin: center;
       width: 100%;
       position: static;
@@ -361,7 +382,7 @@ button:focus-visible {
         row-gap: 0px;
     }
   }
-} */
+}
 
 @media (min-width: 720px) {
   @media not all and (min-width: 1280px) {
@@ -417,6 +438,12 @@ button:focus-visible {
   .flat {
     transform: scaleY(0.7);
     transform-origin: bottom;
+  }
+  .flatter {
+    transform: scale(0.63);
+    transform-origin: bottom;
+    right: -9rem;
+    top: -4rem;
   }
   .trend {
     grid-column: span 2 / span 2;

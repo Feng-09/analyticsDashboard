@@ -3,7 +3,7 @@ function Platform() {
         <div className="bg-white dark:bg-[#090c1d] flex flex-col p-5 border border-[#EDF2F7] rounded-[0.875rem] col-span-1 platforms">
             <div className="flex justify-between mb-5">
                 <h1 className="font-jakarta font-semibold text-lg text-[#26282C] dark:text-slate-300">Top Platform</h1>
-                <p className="text-[#34CAA5] font-jakarta text-lg font-semibold">See All</p>
+                <p className="text-[#34CAA5] font-jakarta text-lg font-semibold hover:cursor-pointer">See All</p>
             </div>
             <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-4">

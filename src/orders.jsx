@@ -10,7 +10,7 @@ function Orders({ theme }) {
         <div className="bg-white dark:bg-[#090c1d] p-5 flex flex-col border border-[#EDF2F7] rounded-[0.875rem] orders">
             <div className="flex justify-between items-center">
                 <h1 className="font-jakarta text-lg font-semibold text-[#26282C] dark:text-slate-300">Last Orders</h1>
-                <p className="text-[#34CAA5] font-jakarta text-lg font-semibold">See All</p>
+                <p className="text-[#34CAA5] font-jakarta text-lg font-semibold hover:cursor-pointer">See All</p>
             </div>
             <div className="flex flex-col">
                 <div className="flex justify-between my-3">
@@ -31,7 +31,7 @@ function Orders({ theme }) {
                     <p className='w-[3.675rem] sm:w-[7.25rem] font-jakarta text-[#737373] dark:text-slate-400'>Nov 15, 2023</p>
                     <p className='w-[3.75rem] sm:w-[7.5rem] font-jakarta text-[#0D062D] dark:text-slate-200 font-semibold'>$80,000</p>
                     <p className='w-[3rem] sm:w-[5.9375rem] font-jakarta text-[#34CAA5]'>Paid</p>
-                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center'>
+                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center hover:cursor-pointer'>
                         <img src={view} className={theme == 'dark' ? 'filt mr-[0.31rem]' : 'mr-[0.31rem]'} />
                         <p className='font-jakarta text-[#0D062D] dark:text-slate-200 text-sm'>View</p>
                     </div>
@@ -47,7 +47,7 @@ function Orders({ theme }) {
                     <p className='w-[3.675rem] sm:w-[7.25rem] font-jakarta text-[#737373] dark:text-slate-400'>Nov 15, 2023</p>
                     <p className='w-[3.75rem] sm:w-[7.5rem] font-jakarta text-[#0D062D] dark:text-slate-200 font-semibold'>$150,000</p>
                     <p className='w-[3rem] sm:w-[5.9375rem] font-jakarta text-[#ED544E]'>Refund</p>
-                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center'>
+                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center hover:cursor-pointer'>
                         <img src={view} className={theme == 'dark' ? 'filt mr-[0.31rem]' : 'mr-[0.31rem]'} />
                         <p className='font-jakarta text-[#0D062D] dark:text-slate-200 text-sm'>View</p>
                     </div>
@@ -63,7 +63,7 @@ function Orders({ theme }) {
                     <p className='w-[3.675rem] sm:w-[7.25rem] font-jakarta text-[#737373] dark:text-slate-400'>Nov 14, 2023</p>
                     <p className='w-[3.75rem] sm:w-[7.5rem] font-jakarta text-[#0D062D] dark:text-slate-200 font-semibold'>$87,000</p>
                     <p className='w-[3rem] sm:w-[5.9375rem] font-jakarta text-[#34CAA5]'>Paid</p>
-                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center'>
+                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center hover:cursor-pointer'>
                         <img src={view} className={theme == 'dark' ? 'filt mr-[0.31rem]' : 'mr-[0.31rem]'} />
                         <p className='font-jakarta text-[#0D062D] dark:text-slate-200 text-sm'>View</p>
                     </div>
@@ -79,7 +79,7 @@ function Orders({ theme }) {
                     <p className='w-[3.675rem] sm:w-[7.25rem] font-jakarta text-[#737373] dark:text-slate-400'>Nov 14, 2023</p>
                     <p className='w-[3.75rem] sm:w-[7.5rem] font-jakarta text-[#0D062D] dark:text-slate-200 font-semibold'>$100,000</p>
                     <p className='w-[3rem] sm:w-[5.9375rem] font-jakarta text-[#ED544E]'>Refund</p>
-                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center'>
+                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center hover:cursor-pointer'>
                         <img src={view} className={theme == 'dark' ? 'filt mr-[0.31rem]' : 'mr-[0.31rem]'} />
                         <p className='font-jakarta text-[#0D062D] dark:text-slate-200 text-sm'>View</p>
                     </div>
@@ -95,7 +95,7 @@ function Orders({ theme }) {
                     <p className='w-[3.675rem] sm:w-[7.25rem] font-jakarta text-[#737373] dark:text-slate-400'>Nov 13, 2023</p>
                     <p className='w-[3.75rem] sm:w-[7.5rem] font-jakarta text-[#0D062D] dark:text-slate-200 font-semibold'>$78,000</p>
                     <p className='w-[3rem] sm:w-[5.9375rem] font-jakarta text-[#34CAA5]'>Paid</p>
-                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center'>
+                    <div className='w-[3.5rem] sm:w-[5rem] flex items-center hover:cursor-pointer'>
                         <img src={view} className={theme == 'dark' ? 'filt mr-[0.31rem]' : 'mr-[0.31rem]'} />
                         <p className='font-jakarta text-[#0D062D] dark:text-slate-200 text-sm'>View</p>
                     </div>
