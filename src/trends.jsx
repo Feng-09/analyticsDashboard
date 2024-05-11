@@ -14,7 +14,7 @@ function SalesTrends({ theme }) {
   const container = useRef()
 
   useGSAP(() => {
-    gsap.from(".barItem", {height: 0, stagger: 0.01, duration: 0.2,})
+    gsap.from(".barItem", {height: 0, stagger: 0.05, duration: 0.7,})
   }, { scope: container })
     return (
         <div className="bg-white dark:bg-[#090c1d] p-5 border border-[#EDF2F7] rounded-[0.875rem] w-fit trend">
