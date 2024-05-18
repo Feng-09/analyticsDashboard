@@ -1,8 +1,22 @@
-# React + Vite
+# Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+There's not much to say about this one. It is my entry for a hackathon where the challenge was to improve the UI as much as possible. I made it responsive across devices and added a dark mode theme. Also added a few features and some cool animations to increase the overall user experience!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies used
+
+React, Tailwind, GSAP
+
+### Screenshot
+
+![Screenshot.png](Screenshot.png)
+
+### Links
+
+- Live Site URL: [https://feng-analytics-dashboard.netlify.app](https://feng-analytics-dashboard.netlify.app)
+
+### Built with
+ 
+- Vite
+- Mobile-first workflow
